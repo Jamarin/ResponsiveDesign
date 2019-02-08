@@ -1,0 +1,280 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+/* gris oscuro = #1d252c:
+gris claro = #626262;
+background gris = #1b2127; 
+celeste =  #026fff;
+*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: -.2px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+h1 strong {
+    color: #056FFF;
+}
+
+h2 {
+    color: #056FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.header {
+    align-items: center;
+    background-color: #1D252C;
+    color: white;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+}
+
+.menu {
+    height: inherit;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+}
+
+.header .menu ol li {
+    height: inherit;
+}
+
+.header a {
+    align-items: center;
+    color: white;
+    display: flex;
+    height: inherit;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.hero {
+    align-items: center;
+    background-color: #1B2127;
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.hero-image {
+    object-fit: cover;
+}
+
+.portfolio {
+    background-color: #FAFAFA;
+    padding: 20px;
+}
+
+.project {
+    align-items: center;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.project strong {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.project .project-title {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project .project-course {
+    margin: 10px 0;
+}
+
+.project .project-date {
+    margin: 10px 0;
+}
+
+.project .project-url {
+    margin: 10px 0;
+}
+
+.project .project-description {
+    font-size: 20px;
+}
+
+.project .project-textContainer {
+    width: 500px;
+}
+
+.project .project-imageContainer {
+    width: 500px;
+}
+
+.events {
+    padding: 20px;
+}
+
+.events h2 {
+    margin-left: 10px;
+}
+
+.eventsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event {
+    background-color: #F4FBFF;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin: 10px;
+    overflow: hidden;
+    width: 480px;
+}
+
+.event .event-textContainer {
+    background-color: white;
+    margin: 20px 40px;
+    margin-top: -40px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.event .event-description {
+    text-align: left;
+}
+
+.event .event-url {
+    border: 1px solid #056FFF;
+    border-radius: 5px;
+    color: #056FFF;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.event img {
+    height: 200px;
+    object-fit: cover;
+    width: 480px;
+}
+
+.contact {
+    align-items: center;
+    background-color: #056FFF;
+    color: white;
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.social-link {
+    background-size: 50px 50px;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    width: 50px;
+}
+
+.social-link.twitter {
+    background-image: url('../img/twitter.svg');
+}
+
+.social-link.facebook {
+    background-image: url('../img/facebook.svg');
+}
+
+.social-link.github {
+    background-image: url('../img/github.svg');
+}
+
+.social-link.instagram {
+    background-image: url('../img/instagram.svg');
+}
+
+.form-email input {
+    background-image: url('../img/envelope.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position-x: 5px;
+    background-position-y: center;
+    border-color: gray;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 20px 10px 25px;
+}
+
+.form-email button {
+    background: transparent;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    display: block;
+    padding: 10px 0;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.form-email h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer {
+    align-items: center;
+    background-color: #1B252C;
+    color: white;
+    display: flex;
+    justify-content: space-between
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
+}
+
+.container {
+    align-items: inherit;
+    display: inherit;
+    height: inherit;
+    justify-content: inherit;
+    margin: 0 auto;
+    width: 1000px;
+}
