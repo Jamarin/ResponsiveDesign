@@ -55,6 +55,7 @@ h2 {
     background-color: #1D252C;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     height: 70px;
     justify-content: space-between;
 }
@@ -68,7 +69,7 @@ h2 {
     height: inherit;
 }
 
-.header .menu ol li {
+.header ol li {
     height: inherit;
 }
 
@@ -85,6 +86,7 @@ h2 {
     align-items: center;
     background-color: #1B2127;
     display: flex;
+    flex-wrap: wrap;
     height: 300px;
     justify-content: space-between;
 }
@@ -104,6 +106,7 @@ h2 {
     border: 1px solid gray;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 20px;
@@ -113,34 +116,38 @@ h2 {
     font-family: 'Fjalla One', sans-serif;
 }
 
-.project .project-title {
+.project-title {
     font-size: 30px;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.project .project-course {
+.project-course {
     margin: 10px 0;
 }
 
-.project .project-date {
+.project-date {
     margin: 10px 0;
 }
 
-.project .project-url {
+.project-url {
     margin: 10px 0;
 }
 
-.project .project-description {
+.project-description {
     font-size: 20px;
 }
 
-.project .project-textContainer {
-    width: 500px;
+.project-textContainer {
+    width: 50%;
 }
 
-.project .project-imageContainer {
-    width: 500px;
+.project-imageContainer {
+    width: 50%;
+}
+
+.project-image {
+    max-width: 100%;
 }
 
 .events {
@@ -160,12 +167,12 @@ h2 {
     background-color: #F4FBFF;
     border-radius: 10px;
     flex-shrink: 0;
-    margin: 10px;
+    margin: 1%;
     overflow: hidden;
-    width: 480px;
+    width: 48%;
 }
 
-.event .event-textContainer {
+.event-textContainer {
     background-color: white;
     margin: 20px 40px;
     margin-top: -40px;
@@ -174,11 +181,11 @@ h2 {
     text-align: center;
 }
 
-.event .event-description {
+.event-description {
     text-align: left;
 }
 
-.event .event-url {
+.event-url {
     border: 1px solid #056FFF;
     border-radius: 5px;
     color: #056FFF;
@@ -187,9 +194,9 @@ h2 {
 }
 
 .event img {
-    height: 200px;
+    height: auto;
     object-fit: cover;
-    width: 480px;
+    width: 100%;
 }
 
 .contact {
@@ -197,32 +204,20 @@ h2 {
     background-color: #056FFF;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     height: 150px;
     justify-content: space-between;
 }
 
 .social-link {
-    background-size: 50px 50px;
+    color: white;
     display: inline-block;
+    font-size: 3em;
     height: 50px;
-    margin: 0 10px;
+    margin: 0 20px;
     width: 50px;
-}
-
-.social-link.twitter {
-    background-image: url('../img/twitter.svg');
-}
-
-.social-link.facebook {
-    background-image: url('../img/facebook.svg');
-}
-
-.social-link.github {
-    background-image: url('../img/github.svg');
-}
-
-.social-link.instagram {
-    background-image: url('../img/instagram.svg');
+    text-align: center;
+    text-decoration: none;
 }
 
 .form-email input {
@@ -259,6 +254,7 @@ h2 {
     background-color: #1B252C;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between
 }
 
@@ -273,8 +269,286 @@ h2 {
 .container {
     align-items: inherit;
     display: inherit;
+    flex: 1;
+    flex-wrap: inherit;
     height: inherit;
     justify-content: inherit;
     margin: 0 auto;
-    width: 1000px;
+    max-width: 1000px;
 }
+
+.html-video {
+    height: auto;
+    width: 100%;
+}
+
+.youtube-video {
+    /*315 * 100 / 560
+    h * 100 / w*/
+    /* Así sacamos el 56.25%*/
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    /*z-index: 3;*/
+}
+
+.flexible-video {
+    background: blue;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
+.burger-button {
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    left: 5px;
+    line-height: 40px !important;
+    position: fixed;
+    text-align: center;
+    top: 5px;
+    width: 40px;
+    z-index: 4;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .container {
+        padding: 0 1em;
+    }
+
+    .hero {
+        height: auto;
+        padding: 2em;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .burger-button {
+        display: block;
+    }
+
+    .header {
+        display: block;
+        height: auto;
+    }
+
+    .header .logo {
+        text-align: center;
+    }
+
+    .header ol {
+        display: block;
+    }
+
+    .header ol li {
+        height: 50px;
+    }
+
+    .header a {
+        justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
+    }
+
+    .menu {
+        align-items: center;
+        background-color: rgba(5, 111, 255, 0.9);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        left: -100vw;
+        position: fixed;
+        top: 0;
+        transition: .3s;
+        width: 100vw;
+        z-index: 3;
+    }
+
+    .menu.is-active {
+        left: 0;
+    }
+
+    .project {
+        display: block;
+    }
+
+    .project-imageContainer {
+        width: auto;
+        text-align: center;
+    }
+
+    .project-textContainer {
+        width: auto;
+        font-size: 16px;
+    }
+
+    .project-course, .project-date, .project-url {
+        margin: .4em 0;
+    }
+
+    .project-title {
+        font-size: 1.5em;
+    }
+
+    .project-url {
+        font-size: 1em;
+    }
+
+    .project-course {
+        font-size: .7em;
+    }
+
+    .project-date {
+        font-size: 1em;
+    }
+
+    .project-description {
+        font-size: .8em;
+    }
+
+    .event {
+        flex-shrink: initial;
+        width: auto;
+    }
+
+    .contact {
+        display: block;
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+    }
+    
+    .form-email h3 {
+        margin-top: 0;
+    }
+
+    .form-email button {
+        margin: 1em auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        padding: 2em 1em;
+    }
+
+    .project-textContainer {
+        font-size: 12px;
+        width: auto;
+    }
+
+    .event-textContainer {
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+
+    .footer {
+        border: 1px solid transparent;
+        display: block;
+        text-align: center;
+    }
+
+    .footer img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 0.8em;
+    }
+
+    .social-link {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .hero {
+        padding: 2em 1em;
+    }
+
+    .social-link {
+        margin: 0 5px;
+    }
+}
+
+/* ICONS */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?i633gr');
+    src:  url('../fonts/icomoon.eot?i633gr#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?i633gr') format('truetype'),
+      url('../fonts/icomoon.woff?i633gr') format('woff'),
+      url('../fonts/icomoon.svg?i633gr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-github:before {
+    content: "\e901";
+  }
+  .icon-twitter:before {
+    content: "\e902";
+  }
+  .icon-instagram:before {
+    content: "\e903";
+  }
+  .icon-facebook:before {
+    content: "\e904";
+  }
+  .icon-menu:before {
+    content: "\e900";
+  }  
+/* ICONS */

@@ -10,12 +10,13 @@
     <title>Portafolio | Desarrollo Web Online</title>
 </head>
 <body>
+    <i class="icon-menu burger-button" id="burguerButton"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
                 <img src="img/logo.png" height="50" alt="Portafolio" />
             </figure>
-            <nav class="menu">
+            <nav class="menu" id="menu">
                 <ol>
                     <li><a class="link" href="#portafolio">Portafolio</a></li>
                     <li><a class="link" href="#eventos">Experiencia</a></li>
@@ -77,7 +78,8 @@
                 </article>
                 <article class="event">
                     <figure class="event-imageContainer">
-                        <img class="event-image" src="img/platzi-conf.jpg" width="500" alt="PlatziConf México 2018" />
+                        <video class="html-video" src="video/f8.mp4" width="1280" height="720" controls></video>
+                        <!-- <img class="event-image" src="img/platzi-conf.jpg" width="500" alt="PlatziConf México 2018" /> -->
                     </figure>
                     <div class="event-textContainer">
                         <h3 class="event-title">PlatziConf México 2018</h3>
@@ -87,7 +89,10 @@
                 </article>
                 <article class="event">
                     <figure class="event-imageContainer">
-                        <img class="event-image" src="img/platzi-conf.jpg" width="500" alt="PlatziConf México 2018" />
+                        <!--<img class="event-image" src="img/platzi-conf.jpg" width="500" alt="PlatziConf México 2018" /> -->
+                        <div class="flexible-video">
+                            <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </figure>
                     <div class="event-textContainer">
                         <h3 class="event-title">PlatziConf México 2018</h3>
@@ -116,10 +121,10 @@
                 <button>Enviar</button>
             </form>
             <div class="social">
-                <a href="https://twitter.com/leonidasesteban" class="social-link twitter"></a>
-                <a href="https://facebook.com/leonidas.esteban" class="social-link facebook"></a>
-                <a href="https://github.com/leonidasesteban" class="social-link github"></a>
-                <a href="https://instagram.com/leonidasesteban" class="social-link instagram"></a>
+                <a href="https://twitter.com/leonidasesteban" class="social-link"><i class="icon-twitter"></i></a>
+                <a href="https://facebook.com/leonidas.esteban" class="social-link"><i class="icon-facebook"></i></a>
+                <a href="https://github.com/leonidasesteban" class="social-link"><i class="icon-github"></i></a>
+                <a href="https://instagram.com/leonidasesteban" class="social-link"><i class="icon-instagram"></i></a>
             </div>
         </div>
     </section>
@@ -129,9 +134,16 @@
                 <p>Curso de desarrollo web online 2019 <img src="./img/platzi.png" width="80" alt="Platzi Logo" /></p>
             </div>
             <div>
-                <p>Designed with &lt;3 by <a href="https://www.twitter.com/thespianartist">@thespianartist</a></p>
+                <p>Designed with ❤ by <a href="https://www.twitter.com/thespianartist">@thespianartist</a></p>
             </div>
         </div>
     </footer>
+    <script>
+        let burgerButton = document.getElementById("burguerButton");
+        let menu = document.getElementById("menu");
+        burguerButton.addEventListener("click", function() {
+            menu.classList.toggle("is-active");
+        })
+    </script>
 </body>
 </html>
